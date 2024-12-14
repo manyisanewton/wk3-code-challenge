@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+/* Container Layout */
+#container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+aside {
+    width: 25%;
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
+}
+
+#films {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    height: calc(100% - 60px);
+}
+
+#films li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #619dd8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#films li:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+#films .selected {
+    background-color: #adb5bd;
+    color: #212529;
+}
+
+/* Main Content Styles */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+#movie-details {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#movie-title {
+    font-size: 2rem;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+#movie-poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#movie-description {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #6c757d;
+}
+
+#movie-runtime,
+#movie-showtime,
+#movie-tickets {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#buy-ticket {
+    display: inline-block;
+    background-color: #0080ff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#buy-ticket:hover {
+    background-color: #1872cc;
+    transform: scale(1.1);
+}
+
+#buy-ticket:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #movie-details {
+        max-width: 100%;
+    }
+}

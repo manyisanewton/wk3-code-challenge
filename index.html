@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flatdango</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="container">
+    <aside>
+      <h2>Movies</h2>
+      <ul id="films">
+        <!-- Movies will be dynamically added here -->
+      </ul>
+    </aside>
+    <ul id="films"></ul>
+<main>
+    <div id="movie-details">
+      <h2 id="movie-title"></h2>
+      <img id="movie-poster" alt="Movie Poster">
+      <p id="movie-description"></p>
+      <p><strong>Runtime:</strong> <span id="movie-runtime"></span> minutes</p>
+      <p><strong>Showtime:</strong> <span id="movie-showtime"></span></p>
+      <p><strong>Available Tickets:</strong> <span id="movie-tickets"></span></p>
+      <button id="buy-ticket">Buy Ticket</button>
+    </div>
+  </main>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
