@@ -6,7 +6,7 @@
       "runtime": "108",
       "capacity": 30,
       "showtime": "04:00PM",
-      "tickets_sold": 2,
+      "tickets_sold": 27,
       "description": "A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/2157/p2157_v_v8_ab.jpg"
     },
@@ -36,7 +36,7 @@
       "runtime": "101",
       "capacity": 40,
       "showtime": "09:00PM",
-      "tickets_sold": 8,
+      "tickets_sold": 31,
       "description": "A young man meets a farm girl who is actually a witch.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/43468/p43468_v_v8_aa.jpg"
     },
@@ -46,7 +46,7 @@
       "runtime": "96",
       "capacity": 50,
       "showtime": "03:30PM",
-      "tickets_sold": 4,
+      "tickets_sold": 45,
       "description": "The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/4232/p4232_v_v8_aa.jpg"
     },
@@ -56,7 +56,7 @@
       "runtime": "112",
       "capacity": 30,
       "showtime": "10:30PM",
-      "tickets_sold": 13,
+      "tickets_sold": 16,
       "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/39804/p39804_v_v8_ab.jpg"
     },
@@ -66,7 +66,7 @@
       "runtime": "94",
       "capacity": 30,
       "showtime": "07:30PM",
-      "tickets_sold": 7,
+      "tickets_sold": 22,
       "description": "A woman seeks revenge on her former lover, who owns a skydiving business.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/40518/p40518_v_v8_aa.jpg"
     },
@@ -86,7 +86,7 @@
       "runtime": "99",
       "capacity": 40,
       "showtime": "07:30PM",
-      "tickets_sold": 17,
+      "tickets_sold": 22,
       "description": "A saboteur posing as a scientist strives to destroy the world's first space station.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/46755/p46755_v_v8_aa.jpg"
     },
@@ -137,7 +137,7 @@
       "runtime": "111",
       "capacity": 50,
       "showtime": "08:00PM",
-      "tickets_sold": 9,
+      "tickets_sold": 40,
       "description": "International man of mystery Diabolik and his lover pull off heist after heist, all while European cops led by Inspector Ginko and envious mobsters led by Ralph Valmont are closing in on them.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/11850/p11850_v_v8_aa.jpg"
     },
@@ -152,4 +152,8 @@
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/37991/p37991_v_v8_aa.jpg"
     }
   ]
-}
+ }
+ 
+ 
+ 
+ 

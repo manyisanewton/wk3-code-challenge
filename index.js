@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         buyTicketButton.dataset.movieId = movie.id; // Store movie ID for updates
         buyTicketButton.dataset.remainingTickets = ticketsLeft; // Track remaining tickets
 
-        // Disable "Buy Ticket" button if sold out
-        buyTicketButton.disabled = ticketsLeft === 0;
-        buyTicketButton.textContent = ticketsLeft > 0 ? "Buy Ticket" : "Sold Out";
     }
 
     // Fetch the First Movie and Display Its Details
@@ -44,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const filmItem = document.createElement("li");
                     filmItem.textContent = movie.title;
                     filmItem.classList.add("film", "item");
-                    filmItem.dataset.id = movie.id;
+                    filmItem.dataset.id = movie.id; 
 
                     // Add "sold-out" class if movie is sold out
                     const ticketsLeft = movie.capacity - movie.tickets_sold;
