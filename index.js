@@ -21,42 +21,80 @@ document.addEventListener("DOMContentLoaded", () => {
         buyTicketButton.dataset.movieId = movie.id; // Store movie ID for updates
         buyTicketButton.dataset.remainingTickets = ticketsLeft; // Track remaining tickets
 
+        // Update button state
+        if (ticketsLeft > 0) {
+            buyTicketButton.textContent = "Buy Ticket";
+            buyTicketButton.disabled = false;
+        } else {
+            buyTicketButton.textContent = "Sold Out";
+            buyTicketButton.disabled = true;
+        }
+    }
+
+    // Save movies data to local storage
+    function saveMoviesToLocalStorage(movies) {
+        localStorage.setItem("movies", JSON.stringify(movies));
+    }
+
+    // Load movies from local storage
+    function loadMoviesFromLocalStorage() {
+        const storedMovies = localStorage.getItem("movies");
+        return storedMovies ? JSON.parse(storedMovies) : null;
     }
 
     // Fetch the First Movie and Display Its Details
-    fetch("http://localhost:3000/films/1")
-        .then((response) => response.json())
-        .then((movie) => displayMovieDetails(movie))
-        .catch((error) => console.error("Error fetching the first movie:", error));
+    function fetchFirstMovie() {
+        const movies = loadMoviesFromLocalStorage();
+        if (movies) {
+            displayMovieDetails(movies[0]); // Display the first movie from local storage
+        } else {
+            // Fallback to fetch if local storage is empty
+            fetch("http://localhost:3000/films/1")
+                .then((response) => response.json())
+                .then((movie) => displayMovieDetails(movie))
+                .catch((error) => console.error("Error fetching the first movie:", error));
+        }
+    }
 
     // Fetch All Movies and Populate the Sidebar
     function fetchMovies() {
-        fetch("http://localhost:3000/films")
-            .then((response) => response.json())
-            .then((movies) => {
-                // Clear any existing list items
-                filmsList.innerHTML = "";
+        const storedMovies = loadMoviesFromLocalStorage();
+        if (storedMovies) {
+            populateMoviesSidebar(storedMovies);
+        } else {
+            fetch("http://localhost:3000/films")
+                .then((response) => response.json())
+                .then((movies) => {
+                    populateMoviesSidebar(movies);
+                    saveMoviesToLocalStorage(movies); // Save to local storage
+                })
+                .catch((error) => console.error("Error fetching movies:", error));
+        }
+    }
 
-                movies.forEach((movie) => {
-                    const filmItem = document.createElement("li");
-                    filmItem.textContent = movie.title;
-                    filmItem.classList.add("film", "item");
-                    filmItem.dataset.id = movie.id; 
+    // Populate Movies Sidebar
+    function populateMoviesSidebar(movies) {
+        // Clear any existing list items
+        filmsList.innerHTML = "";
 
-                    // Add "sold-out" class if movie is sold out
-                    const ticketsLeft = movie.capacity - movie.tickets_sold;
-                    if (ticketsLeft === 0) {
-                        filmItem.classList.add("sold-out");
-                    }
+        movies.forEach((movie) => {
+            const filmItem = document.createElement("li");
+            filmItem.textContent = movie.title;
+            filmItem.classList.add("film", "item");
+            filmItem.dataset.id = movie.id;
 
-                    // Add click event to display movie details
-                    filmItem.addEventListener("click", () => displayMovieDetails(movie));
+            // Add "sold-out" class if movie is sold out
+            const ticketsLeft = movie.capacity - movie.tickets_sold;
+            if (ticketsLeft === 0) {
+                filmItem.classList.add("sold-out");
+            }
 
-                    // Append to the sidebar
-                    filmsList.appendChild(filmItem);
-                });
-            })
-            .catch((error) => console.error("Error fetching movies:", error));
+            // Add click event to display movie details
+            filmItem.addEventListener("click", () => displayMovieDetails(movie));
+
+            // Append to the sidebar
+            filmsList.appendChild(filmItem);
+        });
     }
 
     // Buy Ticket Button Event Listener
@@ -83,11 +121,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (filmItem) filmItem.classList.add("sold-out");
             }
 
+            // Persist updated tickets in local storage
+            const storedMovies = loadMoviesFromLocalStorage();
+            const movieToUpdate = storedMovies.find((movie) => movie.id === parseInt(movieId));
+            if (movieToUpdate) {
+                movieToUpdate.tickets_sold = movieToUpdate.capacity - remainingTickets;
+                saveMoviesToLocalStorage(storedMovies);
+            }
+
             // Persist updated tickets on the server
             fetch(`http://localhost:3000/films/${movieId}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ tickets_sold: parseInt(movieTickets.textContent.split(": ")[1]) }),
+                body: JSON.stringify({ tickets_sold: movieToUpdate.tickets_sold }),
             })
                 .then((response) => response.json())
                 .then((updatedMovie) => console.log("Updated movie:", updatedMovie))
@@ -97,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Fetch movies when the page loads
+    // Fetch movies and display the first one when the page loads
+    fetchFirstMovie();
     fetchMovies();
 });

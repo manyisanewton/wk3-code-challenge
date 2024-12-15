@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f9fa;
+    background-color: #0a7ef3;
+    
     color: #000000;
 }
 
@@ -19,7 +20,7 @@ body {
 aside {
     width: 25%;
     background-color: #343a40;
-    color: #f8f9fa;
+    color: #ffffff;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -64,7 +65,9 @@ main {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
-    background-color: #ffffff;
+    display: flex;
+    display: grid;
+   
 }
 
 #movie-details {
@@ -75,7 +78,7 @@ main {
 
 #movie-title {
     font-size: 2rem;
-    color: #495057;
+    color: #000000;
     margin-bottom: 10px;
 }
 
@@ -83,14 +86,14 @@ main {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 01.9, 0.9, 0.9);
     margin-bottom: 20px;
 }
 
 #movie-description {
     font-size: 1rem;
     margin: 20px 0;
-    color: #6c757d;
+    color: #495057;
 }
 
 #movie-runtime,
@@ -102,8 +105,8 @@ main {
 
 #buy-ticket {
     display: inline-block;
-    background-color: #0080ff;
-    color: #fff;
+    background-color: #344240;
+    color: #ffffff;
     padding: 10px 20px;
     margin-top: 20px;
     border: none;
