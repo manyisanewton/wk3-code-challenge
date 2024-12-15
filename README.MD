@@ -2,9 +2,9 @@
 Welcome to Flatdango, a simple yet elegant web application for managing movie ticket bookings! This app enables users to browse available movies, view details, and purchase tickets, all with a dynamic and responsive interface.
 
  ## 🚀 Features
-. Dynamic Movie List: View all available movies in a clean sidebar.
-Detailed Movie Information: Display runtime, showtime, available tickets, and more.
-Ticket Purchase: Real-time ticket updates for each movie.
+1.Dynamic Movie List: View all available movies in a clean sidebar.
+2.Detailed Movie Information: Display runtime, showtime, available tickets, and more.
+3.Ticket Purchase: Real-time ticket updates for each movie.
 Persistent Data: Local storage integration ensures a seamless experience.
 Responsive Design: Works across devices with an optimized layout.
  ##  🖥️ Technologies Used
