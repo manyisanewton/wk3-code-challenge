@@ -7,7 +7,7 @@ Detailed Movie Information: Display runtime, showtime, available tickets, and mo
 Ticket Purchase: Real-time ticket updates for each movie.
 Persistent Data: Local storage integration ensures a seamless experience.
 Responsive Design: Works across devices with an optimized layout.
- ##🖥️ Technologies Used
+ ##  🖥️ Technologies Used
 HTML: For the structure of the application.
 CSS: For styling and layout, including responsive design.
 JavaScript: For dynamic functionality and interactivity.
@@ -15,7 +15,7 @@ JSON Server: For simulating a backend API.
 ## 🛠️ Setup Instructions
 Follow these steps to run the project locally:
 
-Clone the Repository
+1. Clone the Repository
 
 bash
 Copy code
