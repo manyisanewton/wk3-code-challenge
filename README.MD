@@ -2,16 +2,16 @@
 Welcome to Flatdango, a simple yet elegant web application for managing movie ticket bookings! This app enables users to browse available movies, view details, and purchase tickets, all with a dynamic and responsive interface.
 
  ## 🚀 Features
-1.Dynamic Movie List: View all available movies in a clean sidebar.
-2.Detailed Movie Information: Display runtime, showtime, available tickets, and more.
-3.Ticket Purchase: Real-time ticket updates for each movie.
-Persistent Data: Local storage integration ensures a seamless experience.
-Responsive Design: Works across devices with an optimized layout.
- ##  🖥️ Technologies Used
-HTML: For the structure of the application.
-CSS: For styling and layout, including responsive design.
-JavaScript: For dynamic functionality and interactivity.
-JSON Server: For simulating a backend API.
+ 1. Dynamic Movie List: View all available movies in a clean sidebar. <br>
+2. Detailed Movie Information: Display runtime, showtime, available tickets, and more.<br>
+3. Ticket Purchase: Real-time ticket updates for each movie.<br>
+4. Persistent Data: Local storage integration ensures a seamless experience.<br>
+5. Responsive Design: Works across devices with an optimized layout.<br>
+ ## 🖥️ Technologies Used
+1. HTML: For the structure of the application.
+2. CSS: For styling and layout, including responsive design.
+3. JavaScript: For dynamic functionality and interactivity.
+4. JSON Server: For simulating a backend API.
 ## 🛠️ Setup Instructions
 Follow these steps to run the project locally:
 
@@ -19,42 +19,39 @@ Follow these steps to run the project locally:
 
 bash
 Copy code
-git clone https://github.com/your-username/flatdango.git
-cd flatdango
-Install JSON Server
+git clone <https://github.com/your-username/flatdango.git>
+cd flatdango<br>
+2. Install JSON Server
 Make sure you have npm installed. Then, install JSON Server:
 
-bash
-Copy code
-npm install -g json-server
-Start the Server
+<npm install -g json-server>  <br>
+
+3. Start the Server<br>
 Run the following command to start the JSON Server:
 
-bash
-Copy code
-json-server --watch db.json
-Open the App
+<json-server --watch db.json><br>
+
+4. Open the App
 Open index.html in your favorite browser to launch the app.
 
 ## 📂 Project Structure
-plaintext
-Copy code
-flatdango/
-├── db.json         # Mock database for the movies
-├── index.html      # Main HTML file
-├── style.css       # Styling for the application
-├── index.js        # JavaScript for functionality
-├── README.md       # Project documentation
+
+<flatdango/>
+├── db.json         # Mock database for the movies<br>
+├── index.html      # Main HTML file<br>
+├── style.css       # Styling for the application<br>
+├── index.js        # JavaScript for functionality<br>
+├── README.md       # Project documentation<br>
 ## 📖 Usage Guide
-Browse Movies
+1. Browse Movies
 
 The sidebar displays a list of available movies.
 Click on any movie to view its details.
 View Details
 
-Check runtime, showtime, and available tickets.
+2. Check runtime, showtime, and available tickets.
 Enjoy the movie poster and description.
-Buy Tickets
+3. Buy Tickets
 
 Click the Buy Ticket button to purchase.
 If tickets are sold out, the button will be disabled.
@@ -83,6 +80,8 @@ Submit a pull request with your changes.
 ## 💡 Credits
 Built with ❤️ by Your Name.
 
-## 📃 License
-This project is licensed under the MIT License.
-
+## Author Eng.Newton.Manyisa
+If you encounter any issues with my code or find yourself stuck at any point,<br> please feel free to raise a flag or seek immediate assistance without hesitation. <br>Your feedback and collaboration are highly valued.
+## Contact 
+1. Phone: +254799425417
+2. Email: <manyisanewton25@gmail.com>
