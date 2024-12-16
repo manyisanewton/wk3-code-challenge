@@ -78,7 +78,7 @@ Fork the repository.
 Create a new branch: git checkout -b feature-name.
 Submit a pull request with your changes.
 ## 💡 Credits
-Built with ❤️ by Your Name.
+Built with ❤️ by Newton Manyisa.
 
 ## Author Eng.Newton.Manyisa
 If you encounter any issues with my code or find yourself stuck at any point,<br> please feel free to raise a flag or seek immediate assistance without hesitation. <br>Your feedback and collaboration are highly valued.
