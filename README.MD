@@ -58,7 +58,7 @@ If tickets are sold out, the button will be disabled.
  ## 🌟 Project Highlights
 Local Storage Integration:
 Data is cached locally, ensuring a fast and smooth user experience.
-Dynamic Updates:
+Dynamic Updates:<br>
 Real-time updates for ticket availability with seamless UI feedback.
 Minimalistic Design:
 A clean and modern layout for easy navigation.
