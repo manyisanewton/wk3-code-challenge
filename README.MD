@@ -15,10 +15,8 @@ Welcome to Flatdango, a simple yet elegant web application for managing movie ti
 ## 🛠️ Setup Instructions
 Follow these steps to run the project locally:
 
-1. Clone the Repository
+1. Clone the Repositor
 
-bash
-Copy code
 git clone <https://github.com/your-username/flatdango.git>
 cd flatdango<br>
 2. Install JSON Server
@@ -42,6 +40,7 @@ Open index.html in your favorite browser to launch the app.
 ├── style.css       # Styling for the application<br>
 ├── index.js        # JavaScript for functionality<br>
 ├── README.md       # Project documentation<br>
+
 ## 📖 Usage Guide
 1. Browse Movies
 
